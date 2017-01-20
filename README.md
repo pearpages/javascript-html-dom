@@ -50,6 +50,51 @@ document.getElementById("demo").innerHTML = "Hello World!";
 
 ## Document
 
+### Finding Elements
+
+* document.getElementById(id)
+* document.getElementsByTagName(name)
+* document.getElementsByClassName(name)
+
+### Changing HTML Elements
+
+* element.innerHTML = html
+* element.attribute = value
+* element.setAttribute(attribute,value)
+* element.stye.property = style
+
+### Adding and Deleting Elements
+
+* document.createElement(element)	
+* document.removeChild(element)	
+* document.appendChild(element)	
+* document.replaceChild(element)	
+* document.write(text)	
+
+### Adding Events Handlers
+
+* document.getElementById(id).onclick = function(){code}
+
+### Finding HTML objects
+
+document.anchors	<a>
+document.baseURI	Returns the absolute base URI of the document	3
+document.body	<body>
+document.cookie	
+document.documentElement	<html>
+document.documentURI	
+document.domain	
+document.embeds	<embed>
+document.forms	<form>
+document.head	<head>
+document.images	<img>
+document.links	all <area> and <a> elements that have a href
+document.readyState	Returns the (loading) status of the document
+document.referrer	Returns the URI of the referrer (the linking document)
+document.scripts	<script>
+document.title	<title>
+document.URL
+
 ---
 
 ## Elements
