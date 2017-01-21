@@ -99,6 +99,28 @@ document.URL
 
 ## Elements
 
+```javascript
+var myElement = document.getElementById("intro");
+
+var allP = document.getElementsByTagName("p");
+
+var allIntroClasses = document.getElementsByClassName("intro");
+```
+
+This example finds the element with id="main", and then finds all <p> elements inside "main":
+
+```javascript
+var x = document.getElementById("main");
+var y = x.getElementsByTagName("p");
+```
+
+### By Query Selector
+
+```javascript
+// also querySelector
+var x = document.querySelectorAll("p.intro");
+```
+
 ---
 
 ## HTML
