@@ -125,6 +125,15 @@ var x = document.querySelectorAll("p.intro");
 
 ## HTML
 
+> Never use document.write() after the document is loaded. It will overwrite the document.
+
+* innerHTML
+* attribute
+
+```javascript
+document.getElementById("myImage").src = "landscape.jpg";
+```
+
 ---
 
 ## CSS
