@@ -138,6 +138,30 @@ document.getElementById("myImage").src = "landscape.jpg";
 
 ## CSS
 
+```javascript
+document.getElementById("p2").style.color = "blue";
+```
+
+```javascript
+<h1 id="id1">My Heading 1</h1>
+
+<button type="button" 
+onclick="document.getElementById('id1').style.color = 'red'">
+Click Me!</button>
+```
+
+```javascript
+<p id="p1">
+This is a text.
+This is a text.
+This is a text.
+This is a text.
+</p>
+
+<input type="button" value="Hide text" onclick="document.getElementById('p1').style.visibility='hidden'">
+<input type="button" value="Show text" onclick="document.getElementById('p1').style.visibility='visible'">
+```
+
 ---
 
 ## Animations
