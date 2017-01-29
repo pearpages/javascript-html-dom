@@ -218,6 +218,143 @@ function myMove() {
 
 ## Events
 
+```javascript
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="this.innerHTML = 'Ooops!'">Click on this text!</h1>
+
+</body>
+</html>
+```
+
+```javascript
+<!DOCTYPE html>
+<html>
+<body>
+
+<h1 onclick="changeText(this)">Click on this text!</h1>
+
+<script>
+function changeText(id) { 
+    id.innerHTML = "Ooops!";
+}
+</script>
+
+</body>
+</html>
+```
+
+### Event attributes
+
+e.g. *onclick*
+
+```html
+<button onclick="displayDate()">The time is?</button>
+```
+
+### Assign Events Using the HTML DOM
+
+```javascript
+document.getElementById("myBtn").onclick = displayDate;
+```
+
+### The onload and onunload Events
+
+The onload and onunload events are triggered when the user **enters or leaves the page**.
+
+The onload event can be used to check the visitor's browser type and browser version, and load the proper version of the web page based on the information.
+
+The onload and onunload events can be used to deal with **cookies**.
+
+```html
+<body onload="checkCookies()">
+```
+
+```html
+<!DOCTYPE html>
+<html>
+<body onload="checkCookies()">
+
+<p id="demo"></p>
+
+<script>
+function checkCookies() {
+    var text = "";
+    if (navigator.cookieEnabled == true) {
+        text = "Cookies are enabled.";
+    } else {
+        text = "Cookies are not enabled.";
+    }
+    document.getElementById("demo").innerHTML = text;
+}
+</script>
+
+</body>
+</html> 
+```
+
+### The onchange Event
+
+```html
+<input type="text" id="fname" onchange="upperCase()">
+```
+
+### The onmouseover and onmouseout Events
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmouseover="mOver(this)" onmouseout="mOut(this)" 
+style="background-color:#D94A38;width:120px;height:20px;padding:40px;">
+Mouse Over Me</div>
+
+<script>
+function mOver(obj) {
+    obj.innerHTML = "Thank You"
+}
+
+function mOut(obj) {
+    obj.innerHTML = "Mouse Over Me"
+}
+</script>
+
+</body>
+</html> 
+```
+
+### The onmousedown, onmouseup and onclick Events
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<div onmousedown="mDown(this)" onmouseup="mUp(this)"
+style="background-color:#D94A38;width:90px;height:20px;padding:40px;">
+Click Me</div>
+
+<script>
+function mDown(obj) {
+    obj.style.backgroundColor = "#1ec5e5";
+    obj.innerHTML = "Release Me";
+}
+
+function mUp(obj) {
+    obj.style.backgroundColor="#D94A38";
+    obj.innerHTML="Thank You";
+}
+</script>
+
+</body>
+</html> 
+```
+
+[HTML DOM Event Object Reference](http://www.w3schools.com/jsref/dom_obj_event.asp)
+
 ---
 
 ## EventListener
