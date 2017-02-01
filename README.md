@@ -248,7 +248,16 @@ function changeText(id) {
 
 ### Event attributes
 
-e.g. *onclick*
+e.g. 
+
+* onclick
+* onload
+* onchange
+* onmouseover
+* onmouseout
+* onmousedown
+* onmouseup
+* onfocus
 
 ```html
 <button onclick="displayDate()">The time is?</button>
