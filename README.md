@@ -368,6 +368,88 @@ function mUp(obj) {
 
 ## EventListener
 
+You can add many event handlers to one element.
+
+You can easily remove an event listener by using the removeEventListener() method.
+
+### addEventListener() method
+
+```javascript
+document.getElementById("myBtn").addEventListener("click", displayDate);
+```
+
+The third parameter is a boolean value specifying whether to use event bubbling or event capturing. This parameter is optional.
+
+```
+element.addEventListener(event, function, useCapture);
+```
+
+```javascript
+element.addEventListener("click", function(){ alert("Hello World!"); });
+```
+
+```javascript
+element.addEventListener("click", myFunction);
+
+function myFunction() {
+    alert ("Hello World!");
+}
+```
+
+### Add Many Event Handlers to the Same Element
+
+```javascript
+element.addEventListener("click", myFunction);
+element.addEventListener("click", mySecondFunction);
+element.addEventListener("mouseover", myFunction);
+element.addEventListener("click", mySecondFunction);
+element.addEventListener("mouseout", myThirdFunction);
+```
+
+### Add an Event Handler to the Window Object
+
+The addEventListener() method allows you to add event listeners on any HTML DOM object such as HTML elements, the HTML document, the window object, or other objects that support events, like the xmlHttpRequest object.
+
+```javascript
+window.addEventListener("resize", function(){
+    document.getElementById("demo").innerHTML = sometext;
+});
+```
+
+### Passing Parameters
+
+```html
+<!DOCTYPE html>
+<html>
+<body>
+
+<p>This example demonstrates how to pass parameter values when using the 
+addEventListener() method.</p>
+
+<p>Click the button to perform a calculation.</p>
+
+<button id="myBtn">Try it</button>
+
+<p id="demo"></p>
+
+<script>
+var p1 = 5;
+var p2 = 7;
+
+document.getElementById("myBtn").addEventListener("click", function() {
+    myFunction(p1, p2);
+});
+
+function myFunction(a, b) {
+    var result = a * b;
+    document.getElementById("demo").innerHTML = result;
+}
+</script>
+
+</body>
+</html>
+```
+
 ---
 
 ## Navigation
