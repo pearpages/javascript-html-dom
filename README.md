@@ -450,6 +450,34 @@ function myFunction(a, b) {
 </html>
 ```
 
+### Event Bubbling or Event capturing
+
+#### Bubbling
+
+In *bubbling* the inner most element's event is handled first and then the outer: the <p> element's click event is handled first, then the <div> element's click event.
+
+#### Capturing
+
+In *capturing* the outer most element's event is handled first and then the inner: the <div> element's click event will be handled first, then the <p> element's click event.
+
+```
+// With the addEventListener() method you can specify the propagation type by using the "useCapture" parameter
+addEventListener(event, function, useCapture);
+```
+
+> The default value is false, which will use the bubbling propagation, when the value is set to true, the event uses the capturing propagation.
+
+```javascript
+document.getElementById("myP").addEventListener("click", myFunction, true);
+document.getElementById("myDiv").addEventListener("click", myFunction, true);
+```
+
+### removeEventListner()
+
+```javascript
+element.removeEventListener("mousemove", myFunction);
+```
+
 ---
 
 ## Navigation
