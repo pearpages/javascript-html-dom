@@ -478,9 +478,64 @@ document.getElementById("myDiv").addEventListener("click", myFunction, true);
 element.removeEventListener("mousemove", myFunction);
 ```
 
+[HTML DOM Event Object Reference](http://www.w3schools.com/jsref/dom_obj_event.asp)
+
 ---
 
 ## Navigation
+
+### DOM Nodes
+
+> According to the W3C HTML DOM standard, everything in an HTML document is a node
+
+* entire document
+* every HTML element
+* text inside HTML elements
+* every HTML attribute
+* all comments
+
+With the HTML DOM, all nodes in the node tree can be accessed by JavaScript.
+
+New nodes can be created, and all nodes can be modified or deleted.
+
+### Node Relationships
+
+* root
+* parent (only one)
+* children
+* siblings
+
+### Navigating Between Nodes
+
+* parentNode
+* childNodes[nodenumber]
+* firstChild
+* lastChild
+* nextSibling
+* previousSibling
+
+> A common error in DOM processing is to expect an element node to contain text.
+
+```html
+<title id="demo">DOM Tutorial</title>
+```
+
+The element node <title> (in the example above) does not contain text.
+
+It contains a **text node** with the value "DOM Tutorial".
+
+```javascript
+// The value of the text node can be accessed by the node's innerHTML property.
+var myTitle = document.getElementById("demo").innerHTML;
+
+// Accessing the innerHTML property is the same as accessing the **nodeValue** of the first child:
+
+var myTitle = document.getElementById("demo").firstChild.nodeValue;
+
+// or
+
+var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
+```
 
 ---
 
