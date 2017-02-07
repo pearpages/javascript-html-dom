@@ -537,6 +537,32 @@ var myTitle = document.getElementById("demo").firstChild.nodeValue;
 var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
 ```
 
+### DOM Root Nodes
+
+* document.body (the body)
+* document.documentElement (the full document)
+
+### The nodeName property
+
+* is read-only
+* **tag** name for an element node
+* of a text node is **#text**
+* the document node is always **#document**
+
+### The nodeValue property
+
+* elment nodes is **undefined**
+* text nodes is the text
+* of attributes is the attribute
+
+### nodeType property
+
+* Element
+* Attribute
+* Text
+* Comment
+* Document
+
 ---
 
 ## Nodes
