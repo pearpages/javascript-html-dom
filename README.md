@@ -567,6 +567,63 @@ var myTitle = document.getElementById("demo").childNodes[0].nodeValue;
 
 ## Nodes
 
+### Creating New HTML Elements (Nodes)
+
+To add a new element to the HTML DOM, you must create the element (element node) first, and then append it to an existing element.
+
+```javascript
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+element.appendChild(para);
+```
+
+### insertBefore()
+
+```javascript
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var element = document.getElementById("div1");
+var child = document.getElementById("p1");
+element.insertBefore(para,child);
+```
+
+### Removing Existing HTML Elements
+
+> It would be nice to be able to remove an element without referring to the parent.
+But sorry. The DOM needs to know both the element you want to remove, and its parent.
+
+```javascript
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+parent.removeChild(child);
+```
+
+**Use it that way**
+
+```javascript
+var child = document.getElementById("p1");
+child.parentNode.removeChild(child);
+```
+
+### Replacing HTML Elements
+
+To replace an element to the HTML DOM, use the replaceChild() method.
+
+```javascript
+var para = document.createElement("p");
+var node = document.createTextNode("This is new.");
+para.appendChild(node);
+
+var parent = document.getElementById("div1");
+var child = document.getElementById("p1");
+parent.replaceChild(para, child);
+```
+
 ---
 
 ## Nodelist
