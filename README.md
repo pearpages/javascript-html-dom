@@ -628,4 +628,30 @@ parent.replaceChild(para, child);
 
 ## Nodelist
 
+```javascript
+var x = document.getElementsByTagName("p");
+
+// The nodes can be accessed by an index number. To access the second <p> node you can write:
+
+y = x[1];
+```
+
+### List Length
+
+```javascript
+var myNodelist = document.getElementsByTagName("p");
+document.getElementById("demo").innerHTML = myNodelist.length;
+```
+
+> *A node list is not an array!* 
+A node list may look like an array, but it is not. You can loop through the node list and refer to its nodes like an array. However, you cannot use Array Methods, like valueOf() or join() on the node list.
+
+```javascript
+var myNodelist = document.getElementsByTagName("p");
+var i;
+for (i = 0; i < myNodelist.length; i++) {
+    myNodelist[i].style.backgroundColor = "red";
+}
+```
+
 ---
