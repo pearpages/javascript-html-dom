@@ -25,7 +25,7 @@ A **property** is a value that you can get or set (like changing the content of 
 
 A **method** is an action you can do (like add or deleting an HTML element).
 
-```javascript
+```html
 <html>
 <body>
 
@@ -77,22 +77,22 @@ document.getElementById("demo").innerHTML = "Hello World!";
 
 ### Finding HTML objects
 
-document.anchors	<a>
+document.anchors	&gt;a&lt;
 document.baseURI	Returns the absolute base URI of the document	3
-document.body	<body>
+document.body	&gt;body&lt;
 document.cookie	
-document.documentElement	<html>
+document.documentElement	&gt;html&lt;
 document.documentURI	
 document.domain	
-document.embeds	<embed>
-document.forms	<form>
-document.head	<head>
-document.images	<img>
-document.links	all <area> and <a> elements that have a href
+document.embeds	&gt;embed&lt;
+document.forms	&gt;form&lt;
+document.head	&gt;head&lt;
+document.images	&gt;img&lt;
+document.links	all &gt;area&lt; and &gt;a&lt; elements that have a href
 document.readyState	Returns the (loading) status of the document
 document.referrer	Returns the URI of the referrer (the linking document)
-document.scripts	<script>
-document.title	<title>
+document.scripts	&gt;script&lt;
+document.title	&gt;title&lt;
 document.URL
 
 ---
