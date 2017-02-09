@@ -142,7 +142,7 @@ document.getElementById("myImage").src = "landscape.jpg";
 document.getElementById("p2").style.color = "blue";
 ```
 
-```javascript
+```html
 <h1 id="id1">My Heading 1</h1>
 
 <button type="button" 
