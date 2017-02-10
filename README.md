@@ -77,23 +77,23 @@ document.getElementById("demo").innerHTML = "Hello World!";
 
 ### Finding HTML objects
 
-document.anchors	&gt;a&lt;
-document.baseURI	Returns the absolute base URI of the document	3
-document.body	&gt;body&lt;
-document.cookie	
-document.documentElement	&gt;html&lt;
-document.documentURI	
-document.domain	
-document.embeds	&gt;embed&lt;
-document.forms	&gt;form&lt;
-document.head	&gt;head&lt;
-document.images	&gt;img&lt;
-document.links	all &gt;area&lt; and &gt;a&lt; elements that have a href
-document.readyState	Returns the (loading) status of the document
-document.referrer	Returns the URI of the referrer (the linking document)
-document.scripts	&gt;script&lt;
-document.title	&gt;title&lt;
-document.URL
+* document.anchors	**a**
+* document.baseURI	Returns the absolute base URI of the document	3
+*  document.body	**body**
+*  document.cookie	
+*  document.documentElement	**html**
+*  document.documentURI	
+*  document.domain	
+*  document.embeds	**embed**
+*  document.forms	**form**
+*  document.head	**head**
+*  document.images	**img**
+*  document.links	all **area** and **a** elements that have a href
+*  document.readyState	Returns the (loading) status of the document
+*  document.referrer	Returns the URI of the referrer (the linking document)
+*  document.scripts	   **script**
+*  document.title	**title**
+*  document.URL
 
 ---
 
@@ -107,7 +107,7 @@ var allP = document.getElementsByTagName("p");
 var allIntroClasses = document.getElementsByClassName("intro");
 ```
 
-This example finds the element with id="main", and then finds all <p> elements inside "main":
+This example finds the element with id="main", and then finds all **p** elements inside "main":
 
 ```javascript
 var x = document.getElementById("main");
@@ -520,7 +520,7 @@ New nodes can be created, and all nodes can be modified or deleted.
 <title id="demo">DOM Tutorial</title>
 ```
 
-The element node <title> (in the example above) does not contain text.
+The element node **title> (in the example above) does not contain text.
 
 It contains a **text node** with the value "DOM Tutorial".
 
@@ -594,8 +594,7 @@ element.insertBefore(para,child);
 
 ### Removing Existing HTML Elements
 
-> It would be nice to be able to remove an element without referring to the parent.
-But sorry. The DOM needs to know both the element you want to remove, and its parent.
+> It would be nice to be able to remove an element without referring to the parent. But sorry. The DOM needs to know both the element you want to remove, and its parent.
 
 ```javascript
 var parent = document.getElementById("div1");
@@ -644,7 +643,8 @@ document.getElementById("demo").innerHTML = myNodelist.length;
 ```
 
 > *A node list is not an array!* 
-A node list may look like an array, but it is not. You can loop through the node list and refer to its nodes like an array. However, you cannot use Array Methods, like valueOf() or join() on the node list.
+
+> A node list may look like an array, but it is not. You can loop through the node list and refer to its nodes like an array. However, you cannot use Array Methods, like valueOf() or join() on the node list.
 
 ```javascript
 var myNodelist = document.getElementsByTagName("p");
